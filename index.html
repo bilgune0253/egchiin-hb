@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff0f5" />
+  <meta name="description" content="Амаржаргал эгчдээ зориулсан жижигхэн төрсөн өдрийн бэлэг" />
+  <title>Амаржаргал эгчдээ 🎀</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="floating-hearts" id="hearts" aria-hidden="true"></div>
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+  <!-- Add your legally obtained audio file at music/kikis-delivery-piano.mp3 -->
+  <audio id="backgroundMusic" src="music/Kiki's Delivery Service - Umi No Mieru Machi Piano.mp3" preload="none" loop></audio>
+  <main class="shell">
+    <div class="ribbon">୨୧ a little gift for you ୨୧</div>
+    <section class="panel active" id="welcome" aria-labelledby="welcomeTitle">
+      <div class="bow" aria-hidden="true">🎀</div>
+      <p class="eyebrow">a very special delivery</p>
+      <h1 id="welcomeTitle">Амаржаргал <em>эгчдээ</em> 💗</h1>
+      <div class="gift" aria-hidden="true">🎁</div>
+      <button class="primary" data-next="surprise">Бэлгээ нээх 💌</button>
+      <p class="tiny">made with love, just for you ♡</p>
+    </section>
+
+    <section class="panel" id="surprise" aria-labelledby="surpriseTitle" hidden>
+      <p class="eyebrow">chapter one · just for you</p>
+      <div class="quote">“Хамгийн сайхан хүмүүсийг зөвхөн нэг өдөр биш, өдөр бүр баярлуулах ёстой.”</div>
+      <p>Амаржаргал эгчдээ төрсөн өдрийн мэнд хүргэе! 🥹</p>
+      <p>Таны инээмсэглэл үргэлж гэрэлтэж, хүсэл мөрөөдөл бүхэн биелж, өдөр бүр тань аз жаргалтай байгаасай.</p>
+      <div class="sparkles" aria-hidden="true">✧ ♡ ✦ ♡ ✧</div>
+      <button class="primary" data-next="letter">Энд захидал бий 💌</button>
+    </section>
+
+    <section class="panel" id="letter" aria-labelledby="letterTitle" hidden>
+      <p class="eyebrow">chapter two · from my heart</p>
+      <h2 id="letterTitle">Танд бичсэн захидал 💌</h2>
+      <button class="envelope" id="envelope" aria-label="Захидлыг нээх" aria-expanded="false">
+        <span class="envelope-flap"></span><span class="envelope-note">♡</span>
+      </button>
+      <p class="hint" id="letterHint">Дугтуйн дээр дараарай ♡</p>
+      <div class="letter-paper" id="letterPaper" hidden>
+        <p class="salutation">Төрсөн өдрийн мэнд хүргэе 🎂,</p>
+        <p id="typedLetter" aria-live="polite"></p>
+        <p class="signature" id="signature" hidden>Энэхүү бяцхан цахим мэндчилгээ танд инээмсэглэл бэлэглэнэ гэж найдаж байна. 🌷 💗<br />Төрсөн өдрийн мэндийг дахин хүргэе! 💗</p>
+      </div>
+      <button class="primary" id="letterNext" data-next="cake" hidden>Хүслээ шивнэх үү? 🎂</button>
+    </section>
+
+    <section class="panel" id="cake" aria-labelledby="cakeTitle" hidden>
+      <p class="eyebrow">chapter three · make a wish</p>
+      <h2 id="cakeTitle">Хүслээ шивнээрэй ✨</h2>
+      <p>Нүдээ аниад хамгийн гоё хүслээ бодоорой. Тэгээд лаанууд дээр дараарай!</p>
+      <div class="cake-scene" role="group" aria-label="Гурван лаатай төрсөн өдрийн бялуу">
+        <div class="candles">
+          <button class="candle" aria-label="Эхний лааг унтраах"><span class="flame"></span></button>
+          <button class="candle" aria-label="Хоёр дахь лааг унтраах"><span class="flame"></span></button>
+          <button class="candle" aria-label="Гурав дахь лааг унтраах"><span class="flame"></span></button>
+        </div>
+        <div class="icing"></div><div class="cake-top"></div><div class="cake-bottom"></div><div class="plate"></div>
+      </div>
+      <p class="hint" id="candleStatus" aria-live="polite">0 / 3 лаа унтарлаа 🕯️</p>
+      <button class="primary" id="finalButton" data-next="final" hidden>Last part 🎉</button>
+    </section>
+
+    <section class="panel" id="final" aria-labelledby="finalTitle" hidden>
+      <div class="bow" aria-hidden="true">🎀</div>
+      <p class="eyebrow">always loved, always celebrated</p>
+      <h2 id="finalTitle">Төрсөн өдрийн мэнд! 💖</h2>
+      <p class="lead">Таны хүссэн бүхэн биелж, ирэх өдрүүд тань аз жаргал, амжилт бүтээлээр дүүрэн байх болтугай! 🌷</p>
+      <div class="sparkles" aria-hidden="true">♡ ✨ ♡ ✨ ♡</div>
+      <button class="primary" id="replay">Дахин үзэх ↻</button>
+      <p class="tiny">with all my love ♡</p>
+    </section>
+    <nav class="dots" aria-label="Бэлгийн явц"><span class="selected"></span><span></span><span></span><span></span><span></span></nav>
+  </main>
+  <footer>made with ♡ for Амаржаргал</footer>
+</body>
+</html>
