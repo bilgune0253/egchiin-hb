@@ -43,8 +43,8 @@ function typeLetter() {
   }
   let index = 0;
   typingTimer = setInterval(() => {
-    output.textContent += letterText.slice(index, index + 1.5);
-    index += 1.5;
+    output.textContent += letterText.slice(index, index + 1);
+    index += 1;
     if (index >= letterText.length) {
       clearInterval(typingTimer);
       signature.hidden = false;
